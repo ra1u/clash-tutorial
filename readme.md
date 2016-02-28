@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Functional hardware"
-date:   2016-02-17 13:37:00
+date:   2016-02-28 13:37:00
 categories: programming
 ---
 
@@ -13,6 +13,11 @@ For this we will use [CλaSH](http://www.clash-lang.org/) compiler, that is
 extension of Haskell language being able to convert set of Haskell code in
 either VHLD, Verilog or System verilog. Installation instructions are available
 in [hackage doc](http://hackage.haskell.org/package/clash-prelude/docs/CLaSH-Tutorial.html#g:2).
+
+If you need just quick peek in examples, there is [source code](https://github.com/ra1u/clash-tutorial/tree/master/src)
+available of all examples presented here and is compiled in VHLD, Verilog and SystemVerilog.
+Code is automatically generated, but can be used as quick check of what kind of
+circuit code describes and what to expect from CλaSH compiler.
 
 Premise is that circuits described functional way are considered simpler to reason about,
 compose and reuse. We are able to describe topology trough functional composition
@@ -321,7 +326,7 @@ From signature we can conclude that `fold :: (a -> a -> a) -> Vec (n + 1) a -> a
 takes 2 arguments. First is function of type `(a -> a -> a)` an second argument
 is of type `Vec (n + 1) a`. Function is than applied over vector in tree like
 structure, enabling minimum latency.  
-![fold over vector](/data/fold.svg)
+![fold over vector](data/fold.svg)
 
 Function f from out case is function `(+)` (in haskell operator in brakets is used as function).
 and has prototype `a -> a -> a` and is applied over `state`. 
@@ -453,13 +458,14 @@ is a function, that takes inital value, that outputs this value before remaining
    
 What is even more surprising is that it can be done even vice versa. That is
 `mealey` can be expressed in terms of `register`.  For details check 
+examples on [github](https://github.com/ra1u/clash-tutorial/tree/master/src)
 
 # Conclusion
 
 There are lot of features that were no covered. But are invaluable during developmen
 * repl, (read eval print loop) that allows interactive development, type deduction 
 * ability to simulate in repl or compile in CPU native executable
-* testebenches that generates VHDL / Verilog / Systemverilog
+* testebenches that generates VHDL / Verilog / Systemverilog and can be used directly in IDE
 * full featured library, (ram and rom access and initalisation, multiple clock domains, type safe delays ... )
 
 From my and experience of many it takes lot of time 
