@@ -5,9 +5,9 @@ use IEEE.NUMERIC_STD.ALL;
 use IEEE.MATH_REAL.ALL;
 use std.textio.all;
 use work.all;
-use work.MovingAverage_types.all;
+use work.MovingAverage2_types.all;
 
-entity MovingAverage_mealyzm_1 is
+entity MovingAverage2_mealyzm_1 is
   port(eta_i1          : in signed(7 downto 0);
        -- clock
        system1000      : in std_logic;
@@ -16,7 +16,7 @@ entity MovingAverage_mealyzm_1 is
        bodyVar_o       : out signed(7 downto 0));
 end;
 
-architecture structural of MovingAverage_mealyzm_1 is
+architecture structural of MovingAverage2_mealyzm_1 is
   signal y_0       : signed(7 downto 0);
   signal bodyVar_1 : product0;
   signal bodyVar_2 : product0;
@@ -45,7 +45,7 @@ begin
                ,product0_sel1 => output_5);
   
   -- register begin
-  register_MovingAverage_mealyzm_1_n_20 : block
+  register_MovingAverage2_mealyzm_1_n_20 : block
     signal n_21 : product1;
     signal n_22 : product1;
   begin

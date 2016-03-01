@@ -1,4 +1,4 @@
-package MovingAverage_types;
+package MovingAverage2_types;
   typedef logic signed [7:0] array_of_16_signed_8 [0:15];
   typedef logic signed [7:0] array_of_15_signed_8 [0:14];
   typedef struct {
@@ -58,4 +58,4 @@ package MovingAverage_types;
     product0_to_lv = {product1_to_lv(i.product0_sel0)
                      ,signed_8_to_lv(i.product0_sel1)};
   endfunction
-endpackage : MovingAverage_types
+endpackage : MovingAverage2_types

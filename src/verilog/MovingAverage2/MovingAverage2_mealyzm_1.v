@@ -1,10 +1,10 @@
 // Automatically generated Verilog-2001
-module MovingAverage_mealyzm_1(eta_i1
-                              ,// clock
-                              system1000
-                              ,// asynchronous reset: active low
-                              system1000_rstn
-                              ,bodyVar_o);
+module MovingAverage2_mealyzm_1(eta_i1
+                               ,// clock
+                               system1000
+                               ,// asynchronous reset: active low
+                               system1000_rstn
+                               ,bodyVar_o);
   input signed [7:0] eta_i1;
   input system1000;
   input system1000_rstn;
@@ -38,7 +38,7 @@ module MovingAverage_mealyzm_1(eta_i1
   // register begin
   reg [135:0] n_20;
   
-  always @(posedge system1000 or negedge system1000_rstn) begin : register_MovingAverage_mealyzm_1_n_21
+  always @(posedge system1000 or negedge system1000_rstn) begin : register_MovingAverage2_mealyzm_1_n_21
     if (~ system1000_rstn) begin
       n_20 <= {{(16) {8'sd0}},8'sd0};
     end else begin

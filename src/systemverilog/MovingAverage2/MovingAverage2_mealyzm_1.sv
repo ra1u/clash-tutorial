@@ -1,11 +1,11 @@
 // Automatically generated SystemVerilog-2005
-import MovingAverage_types::*;
-module MovingAverage_mealyzm_1(eta_i1
-                              ,// clock
-                              system1000
-                              ,// asynchronous reset: active low
-                              system1000_rstn
-                              ,bodyVar_o);
+import MovingAverage2_types::*;
+module MovingAverage2_mealyzm_1(eta_i1
+                               ,// clock
+                               system1000
+                               ,// asynchronous reset: active low
+                               system1000_rstn
+                               ,bodyVar_o);
   input logic signed [7:0] eta_i1;
   input logic system1000;
   input logic system1000_rstn;
@@ -39,7 +39,7 @@ module MovingAverage_mealyzm_1(eta_i1
   // register begin
   product1 n_20;
   
-  always_ff @(posedge system1000 or negedge system1000_rstn) begin : register_MovingAverage_mealyzm_1_n_21
+  always_ff @(posedge system1000 or negedge system1000_rstn) begin : register_MovingAverage2_mealyzm_1_n_21
     if (~ system1000_rstn) begin
       n_20 <= '{product1_sel0: '{(16) {8'sd0}},product1_sel1: 8'sd0};
     end else begin

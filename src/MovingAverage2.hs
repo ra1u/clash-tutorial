@@ -1,4 +1,4 @@
-module MovingAverage where
+module MovingAverage2 where
 import CLaSH.Prelude
 
 

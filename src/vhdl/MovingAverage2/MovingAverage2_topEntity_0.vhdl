@@ -5,9 +5,9 @@ use IEEE.NUMERIC_STD.ALL;
 use IEEE.MATH_REAL.ALL;
 use std.textio.all;
 use work.all;
-use work.MovingAverage_types.all;
+use work.MovingAverage2_types.all;
 
-entity MovingAverage_topEntity_0 is
+entity MovingAverage2_topEntity_0 is
   port(eta_i1          : in signed(7 downto 0);
        -- clock
        system1000      : in std_logic;
@@ -16,9 +16,9 @@ entity MovingAverage_topEntity_0 is
        topLet_o        : out signed(7 downto 0));
 end;
 
-architecture structural of MovingAverage_topEntity_0 is
+architecture structural of MovingAverage2_topEntity_0 is
 begin
-  MovingAverage_mealyzm_1_topLet_o : entity MovingAverage_mealyzm_1
+  MovingAverage2_mealyzm_1_topLet_o : entity MovingAverage2_mealyzm_1
     port map
       (bodyVar_o       => topLet_o
       ,system1000      => system1000

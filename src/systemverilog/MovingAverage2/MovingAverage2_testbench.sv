@@ -1,6 +1,6 @@
 // Automatically generated SystemVerilog-2005
-import MovingAverage_types::*;
-module MovingAverage_testbench(done);
+import MovingAverage2_types::*;
+module MovingAverage2_testbench(done);
   output logic [0:0] done;
   logic [0:0] finished;
   logic system1000;
@@ -37,7 +37,7 @@ module MovingAverage_testbench(done);
   end
   // pragma translate_on
   
-  MovingAverage_topEntity_0 totest
+  MovingAverage2_topEntity_0 totest
   (.system1000 (system1000)
   ,.system1000_rstn (system1000_rstn)
   ,.eta_i1 (eta_i1)

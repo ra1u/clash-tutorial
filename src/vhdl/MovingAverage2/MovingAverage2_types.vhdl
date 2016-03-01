@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-package MovingAverage_types is
+package MovingAverage2_types is
   type array_of_signed_8 is array (integer range <>) of signed(7 downto 0);
   type product1 is record
     product1_sel0 : array_of_signed_8(0 to 15);
@@ -20,7 +20,7 @@ package MovingAverage_types is
   function toSLV (p : product0) return std_logic_vector;
 end;
 
-package body MovingAverage_types is
+package body MovingAverage2_types is
   function toSLV (s : in signed) return std_logic_vector is
   begin
     return std_logic_vector(s);

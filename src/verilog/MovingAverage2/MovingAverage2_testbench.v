@@ -1,5 +1,5 @@
 // Automatically generated Verilog-2001
-module MovingAverage_testbench(done);
+module MovingAverage2_testbench(done);
   output [0:0] done;
   wire [0:0] finished;
   wire system1000;
@@ -40,7 +40,7 @@ module MovingAverage_testbench(done);
   assign system1000_rstn = n_2;
   // pragma translate_on
   
-  MovingAverage_topEntity_0 totest
+  MovingAverage2_topEntity_0 totest
   (.system1000 (system1000)
   ,.system1000_rstn (system1000_rstn)
   ,.eta_i1 (eta_i1)

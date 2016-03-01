@@ -5,13 +5,13 @@ use IEEE.NUMERIC_STD.ALL;
 use IEEE.MATH_REAL.ALL;
 use std.textio.all;
 use work.all;
-use work.MovingAverage_types.all;
+use work.MovingAverage2_types.all;
 
-entity MovingAverage_testbench is
+entity MovingAverage2_testbench is
   port(done : out boolean);
 end;
 
-architecture structural of MovingAverage_testbench is
+architecture structural of MovingAverage2_testbench is
   signal finished        : boolean;
   signal system1000      : std_logic;
   signal system1000_rstn : std_logic;
@@ -40,7 +40,7 @@ begin
              '1' after 2 ns;
   -- pragma translate_on
   
-  totest : entity MovingAverage_topEntity_0
+  totest : entity MovingAverage2_topEntity_0
     port map
       (system1000      => system1000
       ,system1000_rstn => system1000_rstn
